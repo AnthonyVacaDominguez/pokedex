@@ -34,7 +34,7 @@
                 <p class="card-text">Order : {{ Pokemon.order }}</p>
                 <p class="card-text">Type : {{ Pokemon.type }}</p>
                 <a href="#" class="btn btn-primary">Capturar</a>
-                <a href="{{url_for('detalle')}}" class="btn btn-primary">Detalle</a>
+                <a href="{{url_for('detalle',hp = Pokemon.hp, attack = Pokemon.attack, defense = Pokemon.defense, speed = Pokemon.speed)}}" class="btn btn-primary">Detalle</a>
             </div>
         </div>
         
