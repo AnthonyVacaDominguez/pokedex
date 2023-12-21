@@ -18,31 +18,31 @@
         <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/384.png"
+                    <img src="{{Pokemon.photo}}"
                         class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">hp</h5>
-                            = {{hp}}%<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="{{hp}}"
-                            aria-valuemin="{{hp}}%" aria-valuemax="100">
-                            <div class="progress-bar bg-success" style='width: {{hp}}%'></div>
+                            = {{Pokemon.hp}}%<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="{{Pokemon.hp}}"
+                            aria-valuemin="{{Pokemon.hp}}%" aria-valuemax="100">
+                            <div class="progress-bar bg-success" style='width: {{Pokemon.hp}}%'></div>
                         </div>
                         <p class="card-text">attack</h5>
-                           = {{attack}}%<div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="{{attack}}"
+                           = {{Pokemon.attack}}%<div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="{{Pokemon.attack}}"
                             aria-valuemin="0" aria-valuemax="100">
-                            <div class="progress-bar bg-info" style='width: {{attack}}%'></div>
+                            <div class="progress-bar bg-info" style='width: {{Pokemon.attack}}%'></div>
                         </div>
                         <p class="card-text">defense</h5>
-                            = {{defense}}% <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="{{defense}}"
+                            = {{Pokemon.defense}}% <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="{{defense}}"
                             aria-valuemin="0" aria-valuemax="100">
-                            <div class="progress-bar bg-warning" style='width: {{defense}}%'></div>
+                            <div class="progress-bar bg-warning" style='width: {{Pokemon.defense}}%'></div>
                         </div>
                         <p class="card-text">speed</h5>
-                            = {{speed}}% <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="{{speed}}"
+                            = {{Pokemon.speed}}% <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="{{speed}}"
                             aria-valuemin="0" aria-valuemax="100">
-                            <div class="progress-bar bg-danger" style='width: {{speed}}%'</div>
+                            <div class="progress-bar bg-danger" style='width: {{Pokemon.speed}}%'</div>
                         </div>
 
 

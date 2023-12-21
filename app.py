@@ -65,10 +65,23 @@ def selectbyid(id):
     poke = Pokemon.query.filter_by(id=id).first()
     return str(poke.id) + str(poke.name)
 
-@app.route("/detalle/<hp>/<attack>/<defense>/<speed>")
-def detalle(hp,attack,defense,speed):
-
-    return render_template('detalle.html',hp = hp, attack = attack, defense = defense, speed = speed )
+@app.route("/detalle/<name>")
+def detalle(name):
+    data = get_pokemon_data(name.lower())
+    Pokemon={'id':data.get('id'),
+        'name':data.get('name').upper(),
+        'height':data.get('height'),
+        'weight':data.get('weight'),
+        'order':data.get('order'),
+        'type':'oscuro',
+        'hp': data.get('stats')[0].get('base_stat'),
+        'attack': data.get('stats')[1].get('base_stat'),
+        'defense': data.get('stats')[2].get('base_stat'),
+        'speed': data.get('stats')[5].get('base_stat'),
+        'photo':data.get('sprites').get('other').get('official-artwork').get('front_default'),
+        'photo1':data.get('sprites').get('other').get('dream_world').get('front_default')  
+        }
+    return render_template('detalle.html',Pokemon=Pokemon )
 
 @app.route("/deletebyid/<id>")
 def deletebyid(id):
